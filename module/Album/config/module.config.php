@@ -3,14 +3,14 @@
 namespace Album;
 
 use Laminas\Router\Http\Segment;
-use Laminas\ServiceManager\Factory\InvokableFactory;
+// use Laminas\ServiceManager\Factory\InvokableFactory; // REMOVING THAT
 
 return [
-    'controllers' => [
-        'factories' => [
-            Controller\AlbumController::class => InvokableFactory::class,
-        ],
-    ],
+    // 'controllers' => [ // REMOVING THAT -> Because we're now defining our own factory, we can modify our module.config.php to remove the definition
+    //     'factories' => [
+    //         Controller\AlbumController::class => InvokableFactory::class,
+    //     ],
+    // ],
 
     // The following section is new and should be added to your file:
     'router' => [
